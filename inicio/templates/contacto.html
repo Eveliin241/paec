@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto - PAEC{% endblock %}
+
+{% block header %}Contáctanos{% endblock %}
+
+{% block content %}
+<p>Si deseas comunicarte con nosotros, puedes hacerlo a través de los siguientes medios:</p>
+<ul>
+  <li>Email: contacto@paec.edu.mx</li>
+  <li>Teléfono: +52 55 1234 5678</li>
+  <li>Dirección: Calle de la Renovación #123, Ciudad, México</li>
+</ul>
+<p>También puedes enviarnos un mensaje mediante el formulario de contacto:</p>
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="nombre" placeholder="Tu nombre" required><br><br>
+  <input type="email" name="email" placeholder="Tu correo" required><br><br>
+  <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea><br><br>
+  <button type="submit">Enviar</button>
+</form>
+{% endblock %}
