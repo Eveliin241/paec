@@ -1,98 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ titulo }}</title>
-  <style>
-    /* Fuentes y colores */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0faf0; /* verde muy suave */
-      color: #2e3d2f; /* verde oscuro */
-      margin: 0;
-      padding: 0;
-    }
+{% extends "inicio/base.html" %}
 
-    header {
-      background: linear-gradient(135deg, #a8e6cf, #dcedc1); /* verde/amarillo suave */
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+{% block title %}Inicio - PAEC{% endblock %}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+{% block header %}Bienvenido a PAEC{% endblock %}
 
-    nav {
-      margin: 15px 0;
-      text-align: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #2e3d2f;
-      font-weight: bold;
-      margin: 0 15px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #56ab2f; /* verde más brillante al pasar el mouse */
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 15px;
-    }
-
-    main img {
-      border-radius: 15px;
-      max-width: 90%;
-      height: auto;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    main p {
-      font-size: 1.2em;
-      max-width: 700px;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #dcedc1;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>{{ titulo }}</h1>
-  </header>
-
-  <main>
-    <p>{{ mensaje }}</p>
-    <img src="https://i.pinimg.com/1200x/2b/79/4e/2b794ea74b872e0d01c6d35d89e5ecf2.jpg" alt="Imagen PAEC">
-    <nav>
-      <a href="{% url 'home' %}">Inicio</a>
-      <a href="https://www.cbtis75.edu.mx/" target="_blank">Acerca de</a>
-      <a href="{% url 'servicios' %}">Servicios</a>
-      <a href="{% url 'contacto' %}">Contacto</a>
-    </nav>
-  </main>
-
-  <footer>
-    &copy; 2025 PAEC - Centro de Renovación y Aprendizaje
-  </footer>
-</body>
-</html>
-
+{% block content %}
+<p>Aprendizaje y renovación para todos.</p>
+<img src="https://i.pinimg.com/1200x/2b/79/4e/2b794ea74b872e0d01c6d35d89e5ecf2.jpg" alt="Imagen PAEC">
+{% endblock %}

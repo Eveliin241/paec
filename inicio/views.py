@@ -1,14 +1,13 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html', {'titulo': 'Bienvenido a PAEC', 'mensaje': 'Aprendizaje y renovación para todos.'})
-
-def servicios(request):
-    return render(request, 'servicios.html', {'titulo': 'Nuestros Servicios'})
-
-def contacto(request):
-    return render(request, 'contacto.html', {'titulo': 'Contacto'})
+    return render(request, 'inicio/home.html')
 
 def about(request):
-    return render(request, 'about.html', {'titulo': 'Acerca de Nosotros'})
+    return render(request, 'inicio/about.html')
 
+def servicios(request):
+    return render(request, 'inicio/servicios.html')
+
+def contacto(request):
+    return render(request, 'inicio/contacto.html')
