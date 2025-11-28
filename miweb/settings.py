@@ -7,7 +7,12 @@ STATIC_URL = '/static/'
 SECRET_KEY = 'django-insecure-0)618za+vtaq#(rx$u5hccjb_x!7vhd3soa=myqwj-xzn%v&+2'
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'paec-dkyk.onrender.com']
+ALLOWED_HOSTS = [
+    'paec-djoi.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
