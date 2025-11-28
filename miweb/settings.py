@@ -5,17 +5,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 
 SECRET_KEY = 'django-insecure-0)618za+vtaq#(rx$u5hccjb_x!7vhd3soa=myqwj-xzn%v&+2'
-# Seguridad en producción
-DEBUG = False  # Siempre False en producción
 
-# Dominios permitidos
-ALLOWED_HOSTS = [
-    'paec-djoi.onrender.com',  # tu dominio en Render
-    '127.0.0.1',               # para pruebas locales
-    'localhost'
-]
+DEBUG = False
 
-# Si estás detrás de un proxy (Render lo hace), agrega esta línea:
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'paec-djoi.onrender.com']
+
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
