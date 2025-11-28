@@ -1,0 +1,305 @@
+/* ============================================== */
+/* Variables de Color y Tipografía */
+/* ============================================== */
+:root {
+    --verde-principal: #4CAF50;    /* Verde Brillante/Medio */
+    --verde-oscuro: #2E7D32;       /* Verde Profundo para texto/hover */
+    --verde-claro: #E8F5E9;        /* Fondo muy claro */
+    --blanco: #FFFFFF;
+    --gris-texto: #555555;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* ============================================== */
+/* Estilos Globales y Base */
+/* ============================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--blanco);
+}
+
+h1, h2, h3 {
+    color: var(--verde-oscuro);
+    margin-bottom: 15px;
+}
+
+/* Estilos de Secciones */
+.seccion-clara {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.seccion-oscura {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--verde-claro);
+    color: #333;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    color: var(--gris-texto);
+    margin-bottom: 40px;
+}
+
+/* ============================================== */
+/* Botones y Links */
+/* ============================================== */
+.btn-principal {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 50px; /* Borde más redondeado para un look moderno */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-principal:hover {
+    background-color: var(--verde-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================== */
+/* Navegación (Header) */
+/* ============================================== */
+.navbar {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--verde-claro);
+}
+
+.menu-toggle {
+    display: none; /* Ocultar en escritorio */
+    background: none;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* ============================================== */
+/* Sección HERO */
+/* ============================================== */
+.hero {
+    /* *** CAMBIA ESTA URL por tu imagen de fondo local. Se recomienda la ruta './img/hero_background.jpg' *** */
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.6)), 
+                url('./img/hero_background.jpg') no-repeat center center/cover; 
+    padding: 100px 5%;
+    color: var(--blanco);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--blanco);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* ============================================== */
+/* Proyecto Grid (Acerca) */
+/* ============================================== */
+.proyecto-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.info-bloque {
+    flex: 1 1 300px; /* Flexbox para responsividad */
+    text-align: left;
+    padding: 20px;
+    border: 1px solid var(--verde-claro);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-bloque h3 {
+    border-bottom: 2px solid var(--verde-principal);
+    padding-bottom: 5px;
+}
+
+/* ============================================== */
+/* Impacto Cards (La clave para Secundaria) */
+/* ============================================== */
+.impacto-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.impacto-cards .card {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--verde-principal);
+}
+
+.impacto-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+/* ============================================== */
+/* Galería */
+/* ============================================== */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.foto-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.foto-item img:hover {
+    transform: scale(1.05);
+}
+
+.foto-item p {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* ============================================== */
+/* Footer */
+/* ============================================== */
+footer {
+    background-color: #333;
+    color: var(--blanco);
+    padding: 40px 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.equipo-info, .contacto-info {
+    flex: 1 1 300px;
+}
+
+.equipo-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.derechos {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* ============================================== */
+/* Media Queries (Responsividad Móvil) */
+/* ============================================== */
+@media (max-width: 768px) {
+    
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        display: none; /* Ocultar el menú por defecto en móvil */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--verde-oscuro);
+        position: absolute;
+        top: 60px; /* Debajo del navbar */
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar cuando la clase 'active' está activada por JS */
+    }
+
+    .nav-links li a {
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón de hamburguesa */
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .proyecto-grid, .impacto-cards {
+        flex-direction: column;
+    }
+}
