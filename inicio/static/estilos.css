@@ -2,9 +2,9 @@
 /* Variables de Color y Tipografía */
 /* ============================================== */
 :root {
-    --verde-principal: #4CAF50;    /* Verde Brillante/Medio */
-    --verde-oscuro: #2E7D32;       /* Verde Profundo para texto/hover */
-    --verde-claro: #E8F5E9;        /* Fondo muy claro */
+    --verde-principal: #4CAF50;
+    --verde-oscuro: #2E7D32;
+    --verde-claro: #E8F5E9;
     --blanco: #FFFFFF;
     --gris-texto: #555555;
     --fuente-principal: 'Poppins', sans-serif;
@@ -60,7 +60,7 @@ h1, h2, h3 {
     background-color: var(--verde-principal);
     color: var(--blanco);
     text-decoration: none;
-    border-radius: 50px; /* Borde más redondeado para un look moderno */
+    border-radius: 50px;
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
@@ -112,7 +112,7 @@ h1, h2, h3 {
 }
 
 .menu-toggle {
-    display: none; /* Ocultar en escritorio */
+    display: none;
     background: none;
     border: none;
     color: var(--blanco);
@@ -124,9 +124,8 @@ h1, h2, h3 {
 /* Sección HERO */
 /* ============================================== */
 .hero {
-    /* *** CAMBIA ESTA URL por tu imagen de fondo local. Se recomienda la ruta './img/hero_background.jpg' *** */
     background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.6)), 
-                url('./img/hero_background.jpg') no-repeat center center/cover; 
+                url('../img/hero_background.jpg') no-repeat center center/cover;
     padding: 100px 5%;
     color: var(--blanco);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -134,7 +133,6 @@ h1, h2, h3 {
 
 .hero-content h1 {
     font-size: 3em;
-    color: var(--blanco);
     margin-bottom: 20px;
 }
 
@@ -155,7 +153,7 @@ h1, h2, h3 {
 }
 
 .info-bloque {
-    flex: 1 1 300px; /* Flexbox para responsividad */
+    flex: 1 1 300px;
     text-align: left;
     padding: 20px;
     border: 1px solid var(--verde-claro);
@@ -169,7 +167,7 @@ h1, h2, h3 {
 }
 
 /* ============================================== */
-/* Impacto Cards (La clave para Secundaria) */
+/* Impacto Cards */
 /* ============================================== */
 .impacto-cards {
     display: flex;
@@ -265,24 +263,23 @@ footer {
 /* Media Queries (Responsividad Móvil) */
 /* ============================================== */
 @media (max-width: 768px) {
-    
     .navbar {
         padding: 15px 5%;
     }
 
     .nav-links {
-        display: none; /* Ocultar el menú por defecto en móvil */
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: var(--verde-oscuro);
         position: absolute;
-        top: 60px; /* Debajo del navbar */
+        top: 60px;
         left: 0;
         text-align: center;
     }
 
     .nav-links.active {
-        display: flex; /* Mostrar cuando la clase 'active' está activada por JS */
+        display: flex;
     }
 
     .nav-links li a {
@@ -292,7 +289,7 @@ footer {
     }
 
     .menu-toggle {
-        display: block; /* Mostrar el botón de hamburguesa */
+        display: block;
     }
 
     .hero-content h1 {
