@@ -39,8 +39,8 @@ ROOT_URLCONF = 'miweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # tu carpeta de templates global
-        'APP_DIRS': True,
+        'DIRS': [],  # aquí puedes añadir rutas adicionales si quieres
+        'APP_DIRS': True,  # esto debe estar en True para que busque dentro de las apps
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
