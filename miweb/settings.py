@@ -1,19 +1,20 @@
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
 
+# ==============================================
+# SECURITY
+# ==============================================
 SECRET_KEY = 'django-insecure-0)618za+vtaq#(rx$u5hccjb_x!7vhd3soa=myqwj-xzn%v&+2'
-
 DEBUG = True
 ALLOWED_HOSTS = ['paec-djoi.onrender.com', '127.0.0.1', 'localhost']
-
 
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-
+# ==============================================
+# INSTALLED APPS
+# ==============================================
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -24,6 +25,9 @@ INSTALLED_APPS = [
     'inicio',
 ]
 
+# ==============================================
+# MIDDLEWARE
+# ==============================================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -36,11 +40,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'miweb.urls'
 
+# ==============================================
+# TEMPLATES
+# ==============================================
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # aquí puedes añadir rutas adicionales si quieres
-        'APP_DIRS': True,  # esto debe estar en True para que busque dentro de las apps
+        'DIRS': [],  # rutas adicionales si tienes templates fuera de apps
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -52,10 +59,11 @@ TEMPLATES = [
     },
 ]
 
-
-
 WSGI_APPLICATION = 'miweb.wsgi.application'
 
+# ==============================================
+# DATABASE
+# ==============================================
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -63,14 +71,22 @@ DATABASES = {
     }
 }
 
+# ==============================================
+# INTERNATIONALIZATION
+# ==============================================
 LANGUAGE_CODE = 'es-es'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+# ==============================================
+# STATIC FILES
+# ==============================================
+STATIC_URL = '/static/'  # la barra inicial es importante
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # carpeta donde collectstatic pone los archivos
+# STATICFILES_DIRS = []  # solo necesario si tienes carpetas de static fuera de apps
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
+# ==============================================
+# DEFAULT AUTO FIELD
+# ==============================================
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
