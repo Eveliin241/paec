@@ -1,13 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'inicio/home.html')
+    # CRÍTICO: Apuntamos al nombre real de tu archivo de plantilla, 'index.html'.
+    return render(request, 'inicio/index.html') 
 
-def about(request):
-    return render(request, 'inicio/about.html')
-
-def servicios(request):
-    return render(request, 'inicio/servicios.html')
-
-def contacto(request):
-    return render(request, 'inicio/contacto.html')
+# Las funciones about, servicios, y contacto deben ser eliminadas de este archivo.

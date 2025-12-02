@@ -2,9 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # Solo mantenemos la ruta raíz ('/') que llama a la vista 'home'.
     path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('servicios/', views.servicios, name='servicios'),
-    path('contacto/', views.contacto, name='contacto'),
+    
+    # Las rutas 'about/', 'servicios/', y 'contacto/' han sido eliminadas.
 ]
-
