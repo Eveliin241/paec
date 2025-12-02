@@ -19,7 +19,7 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 # Añadimos el dominio de Render que causó el error y el comodín para variables de entorno
 ALLOWED_HOSTS = [
     # **REEMPLAZA ESTE DOMINIO CON TU URL DE RENDER ACTUAL**
-    'paec-1-fpsw.onrender.com', 
+    'paec-g60x.onrender.com', 
     'localhost',
     '127.0.0.1',
 ]
